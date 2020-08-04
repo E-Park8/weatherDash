@@ -5,7 +5,7 @@ Additionally, it will show you the forecast for the next 5 days.
 
 The application will save a user's search history for easy access on future use. 
 
-![Weather Dashboard](Assets\weatherex1.png)
+![Weather Dashboard](Assets/weatherex1.png)
 ![Weather Dasboard 2](Assets/weatherex2.png)
 
 Utilized the OpenWeather API https://openweathermap.org/api 
