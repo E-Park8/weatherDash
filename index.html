@@ -1,29 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <form>
-        <p>
-          <label for="city"></label>
-          <input type="text" name="city" id="city" placeholder="City">
-        </p>
-        <p>
-          <button id="search">Search</button>
-        </p>
+  
+
+    <div class="jumbotron">
+        <h1 class="display-6" style="text-align: center;">Weather Dashboard</h1>
+      </div>
+      <div class="container">
+    <form class="form-inline">
+        <input id="city" class="form-control mr-sm-2" type="text" name="city" placeholder="Search City Name"
+          aria-label="Search">
+        <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
-      <div id="currentDay"></div>
-      <div id="currentTime"></div>
-      <div id="weather"></div>
-      <div id="forecast"></div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="app.js"></script>
+    <p id="currentDay" style="text-align: center;"></p>
+    <div>
+      <div class="row listWeather">
+        <div class="col-4">
+            <p>Recent Searches</p>
+          <ul id="city0" class="list-group-item list-group-item-action location"></ul>
+          <ul id="city1" class="list-group-item list-group-item-action location"></ul>
+          <ul id="city2" class="list-group-item list-group-item-action location"></ul>
+          <ul id="city3" class="list-group-item list-group-item-action location"></ul>
+          <ul id="city4" class="list-group-item list-group-item-action location"></ul>
+          <ul id="city5" class="list-group-item list-group-item-action location"></ul>
+          <ul id="city6" class="list-group-item list-group-item-action location"></ul>
+        </div>
+        <div class="col-8">
+          <div id="weather" class="weatherToday"></div>
+        </div>
+      </div>
+    </div>
+
+    <h1 style="text-align: center;">5 Day Forecast</h1>
+    <div>
+      <div class="row" id="forecast"></div>
+    </div>
+
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
